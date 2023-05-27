@@ -3,7 +3,7 @@
         <div class="logo">CloudHouse</div>
         <div class="flex">
             <router-link class="navigation-tab" :class="{
-                active: $route.path == '/admin'
+                active: $route.path.includes('/admin')
             }" to="/admin">Домашняя<br> страница</router-link>
             <router-link class="navigation-tab" :class="{
                 active: $route.path == '/bookings'
@@ -88,64 +88,21 @@
 
             <div class="flex flex-wrap">
                 <div class="card">
-                    <div class="card-title">Прибывающие</div>
+                    <div class="card-title">Сервисы</div>
                     <div class="card-content">
                         <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status paid">Оплачено</span>
-                            <div class="building">12 - B1</div>
+                            <div class="username">Доп. уборка</div>
+                            <div class="building" style="margin-top: 5px;margin-bottom: -3px;">5 $</div>
                         </div>
                         <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status unpaid">Не оплачено</span>
-                            <div class="building">12 - B1</div>
-                        </div>
-                        <div class="create-card-client">+ Создать заселение</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-title">Убывающие</div>
-                    <div class="card-content">
-                        <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status paid">Оплачено</span>
-                            <div class="building">12 - B1</div>
+                            <div class="username">Доп. комплект полотенец</div>
+                            <div class="building" style="margin-top: 5px;margin-bottom: -3px;">5 $</div>
                         </div>
                         <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status partially_paid">Частично оплачено</span>
-                            <div class="building">1 - А4</div>
+                            <div class="username">Доп. кровать</div>
+                            <div class="building" style="margin-top: 5px;margin-bottom: -3px;">5 $</div>
                         </div>
-                        <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status unpaid">Не оплачено</span>
-                            <div class="building">4 - С2</div>
-                        </div>
-                        <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status unpaid">Не оплачено</span>
-                            <div class="building">4 - С2</div>
-                        </div>
-                        <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status unpaid">Не оплачено</span>
-                            <div class="building">4 - С2</div>
-                        </div>
-                        <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status unpaid">Не оплачено</span>
-                            <div class="building">4 - С2</div>
-                        </div>
-                        <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status unpaid">Не оплачено</span>
-                            <div class="building">4 - С2</div>
-                        </div>
-                        <div class="card-client">
-                            <div class="username">Иван Иванов</div>
-                            <span class="status unpaid">Не оплачено</span>
-                            <div class="building">4 - С2</div>
-                        </div>
+                        <div class="create-card-client">+ Добавить сервис</div>
                     </div>
                 </div>
             </div>
@@ -413,7 +370,7 @@ select {
     align-items: center;
     justify-content: center;
 
-    
+
     font-family: 'Inter';
     font-weight: 600;
     font-size: 12px;
@@ -424,18 +381,19 @@ select {
     background: white;
     padding: 5px 8px 8px;
     border-radius: 3px;
-    
+
     font-family: 'Inter';
     font-size: 11px;
     line-height: 13px;
     margin-bottom: 8px;
 }
+
 .create-card-client {
     background: white;
     display: flex;
     align-items: center;
     padding-left: 5px;
-    
+
     font-family: 'Inter';
     line-height: 13px;
     margin-bottom: 8px;
@@ -449,23 +407,26 @@ select {
 
 .status {
     display: inline-flex;
-    
+
     height: 12px;
     align-items: center;
     padding: 0 5px;
     margin-top: 11px;
     margin-bottom: 7px;
-    
+
     border-radius: 3px;
 }
+
 .paid {
     background: #0DEE4C40;
     color: #38B40DE5;
 }
+
 .unpaid {
     background: #EE0D0D3D;
     color: #B40D0DE5;
 }
+
 .partially_paid {
     background: #EAEE0D40;
     color: #A6B40DE5;
@@ -502,6 +463,4 @@ select {
 .card-content::-webkit-scrollbar-thumb:hover {
     background-color: rgb(109, 166, 221);
 }
-
-
 </style>
