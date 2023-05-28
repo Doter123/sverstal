@@ -1,5 +1,5 @@
 <template>
-    <div class="flex">
+    <div class="flex profile-container">
         <div class="profile">
             <h3>PROFILE</h3>
             <div class="flex">
@@ -68,43 +68,43 @@
 h3 {
     font-family: 'Inter';
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.8em;
     line-height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: .625em;
 }
 
 .profile {
     width: 50%;
-    margin-top: 138px;
+    margin-top: 2em;
 }
 .profile > div {
-    padding-top: 35px;
+    padding-top: 2.1875em;
 }
 .profile-black-img {
-    margin: 0 50px auto;
+    margin: 0 2.2em auto;
 }
 .profile-info input {
     background: transparent;
     border: none;
     border-bottom: 1px solid #8CAA14;
-    width: 342px;
-    height: 24px;
+    /*width: 342px;*/
+    height: 1.5em;
     
     font-family: 'Inter';
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.3em;
 
-    margin-bottom: 35px;
+    margin-bottom: 2.1875em;
 }
 .profile-info input:focus {
     outline: none !important;
 }
 .booking-table {
     border-left: 1px solid #3A3943;
-    padding: 30px 10px 30px 30px;
+    padding: 1.875em 0.625em 1.875em 1.875em;
 }
 
 th {
@@ -120,19 +120,67 @@ th {
     border-left: 1px solid #8CAA14;
 }
 td {
-    height: 85px;
+    height: 4.2em;
     text-align: center;
     border-bottom: 1px solid #8CAA14;
 
     font-family: 'Inter';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125em;
 }
 
 .fa-pen {
-    width: 25px;
+    width: 1.2em;
+    height: 1.2em;
     color: #8CAA14;
     cursor: pointer;
 }
 
+@media (max-width: 1050px) {
+    .profile-container {
+        flex-wrap: wrap !important;
+    }
+    .profile-container > .profile {
+        width: 100%;
+    }
+    .profile-container > .profile > .flex {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 680px) {
+    .profile-container {
+        font-size: 10px !important;
+    }
+}
+@media (max-width: 430px) {
+    .profile-container {
+        font-size: 9px !important;
+    }
+    .profile-container .fa-pen {
+        height: .8em !important;
+        width: 1.2em !important;
+    }
+    .profile-black-img {
+        max-width: 110px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 380px) {
+    .profile-container {
+        font-size: 8px !important;
+    }
+    .profile-container .fa-pen {
+        height: .8em !important;
+        width: 1.2em !important;
+    }
+    .booking-table {
+        padding: 1em 0.45em 1em 1em;
+    }
+    
+    .profile-container .border-none > svg {
+        max-width: .7em !important;
+        margin-left: 5px !important;
+    }
+}
 </style>

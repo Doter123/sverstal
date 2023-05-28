@@ -5,25 +5,216 @@
 
 .white-side {
     background-color: #ffffff;
-  }
-  .blue-side {
+}
+.blue-side {
     background-color: #135fc3;
-  }
-  .text-size-logo {
+}
+.text-size-logo {
     font-size: 2rem;
-  }
+}
 
-  @font-face {
-      font-family: Inter;
-      src: url(./assets/Inter/Inter-VariableFont_slnt,wght.ttf);
-  }
+@font-face {
+    font-family: Inter;
+    src: url(./assets/Inter/Inter-VariableFont_slnt,wght.ttf);
+}
 
-  @font-face {
-      font-family: IslandMoments;
-      src: url(./assets/Island_Moments/IslandMoments-Regular.ttf);
-  }
+@font-face {
+    font-family: IslandMoments;
+    src: url(./assets/Island_Moments/IslandMoments-Regular.ttf);
+}
 
-  @font-face {
-      font-family: Roboto;
-      src: url(./assets/Roboto/Roboto-Regular.ttf);
-  }
+@font-face {
+    font-family: Roboto;
+    src: url(./assets/Roboto/Roboto-Regular.ttf);
+}
+
+
+@media (max-width: 1385px) {
+    .about_us {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .about_us .description {
+        margin: 0 42px !important;
+    }
+
+    #app {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .about_us {
+        padding: 0 12px;
+    }
+
+    .about_us .description {
+        margin: 0 36px !important;
+    }
+
+    #app {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .about_us {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 920px) {
+    #app {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 867px) {
+    #app {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #app {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 715px) {
+    #app {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 715px) {
+    #app {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 680px) {
+    #app {
+        font-size: 9px !important;
+    }
+}
+@media (max-width: 630px) {
+    #app {
+        font-size: 8px !important;
+    }
+    #app .items {
+        flex-wrap: wrap;
+    }
+    #app .items .item {
+        padding: 0 15px;
+        width: 13em;
+    }
+    #app .items .item * {
+        text-align: center;
+        justify-content: center;
+    }
+    .items-pos-a {
+        /*margin-top: -30px !important;*/
+    }
+    #app .items .item .item_description svg {
+        padding-top: 2px;
+        font-size: 1.5em !important;
+    }
+}
+@media (max-width: 510px) {
+    #app {
+        font-size: 7px !important;
+    }
+    #app header .logo {
+        display: none;
+    }
+    #app header {
+        padding: 0.4em 1em !important;
+    }
+}
+@media (max-width: 360px) {
+    #app header {
+        padding: 0 .5em !important;
+    }
+    #app header .navigation-item {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 845px) {
+    .about_us {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .media-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    .about_us .description span {
+        margin-top: 25px;
+    }
+
+    .about_us .description p {
+        margin-bottom: 25px;
+    }
+
+    .about_us .images,
+    .about_us .description {
+        width: 100% !important;
+    }
+
+    .about_us .images {
+        padding: 0 25px;
+    }
+}
+@media (max-width: 890px) {
+    header {
+        padding: 0.75em 2em !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .about_us {
+        padding: 0;
+    }
+
+    .about_us .images {
+        padding: 0 10px;
+    }
+
+    .about_us .description {
+        margin: 0 10px !important;
+    }
+}
+
+@media (max-width: 488px) {
+    .about_us .images>.flex {
+        flex-wrap: wrap-reverse;
+    }
+
+    .about_us .images>.flex>.flex-col:first-child {
+        flex-direction: column-reverse;
+        margin-right: 0 !important;
+        margin-top: 15px;
+    }
+
+    .about_us .images>.flex>.flex-col:last-child img {
+        margin-bottom: 0px !important;
+    }
+}
+@media (max-width: 860px) {
+    .room {
+        max-width: 550px !important;
+        width: 100% !important;
+    }
+}
+@media (max-width: 465px) {
+    .room {
+        margin: 0 10px !important;
+    }
+    .room .room-content {
+        padding: 12px 18px 18px;
+    }
+}

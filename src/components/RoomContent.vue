@@ -62,16 +62,26 @@
 <style>
 
 .rooms {
-    margin-top: 138px;
+    /*margin-top: 138px;*/
 }
 
 .room {
+    min-width: 286.25px;
     margin: 0 17.5px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.358);
     border-radius: 15px;
     max-width: 326px;
     font-family: 'Roboto';
     font-size: 14px;
+}
+
+@media (max-width: 1315px) {
+    .rooms {
+        flex-wrap: wrap;
+    }
+    .room {
+        margin-bottom: 17.5px !important;
+    }
 }
 
 .room-content {

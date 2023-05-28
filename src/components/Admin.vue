@@ -159,6 +159,7 @@ header {
     z-index: 15;
     height: 60px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: white !important;
     /*padding: 12px 22px;*/
 }
 

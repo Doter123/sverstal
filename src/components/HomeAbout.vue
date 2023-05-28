@@ -1,7 +1,7 @@
 <template>
     <div class="about_us flex">
-        <div class="images">
-            <div class="flex">
+        <div class="images" style="width: 50%;">
+            <div class="flex" style="width: 100%;">
                 <div class="flex flex-col" style="margin-right: 15px;">
                     <div class="images-info m-b-15 box-shadow">
                         <img src="../assets/pillow.png" width="50" alt="">
@@ -30,7 +30,7 @@
                 sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. </p>
         </div>
     </div>
-    <div class="about_us flex" style="margin-top: 63px;">
+    <div class="about_us flex media-wrap-reverse">
         <div class="description" style="margin-right: 75px;">
             <span>LOCATION</span>
             <h2>Sary-Oy village</h2>
@@ -47,7 +47,7 @@
                 regional cuisine, and even international fare.</p>
         </div>
         <div class="images">
-            <img src="../assets/map.png" class="w-full h-full" alt="">
+            <img src="../assets/map.png" class="w-full" alt="">
         </div>
     </div>
 </template>
@@ -62,11 +62,12 @@
 
 .about_us .images {
     width: 50%;
+    margin-top: auto;
 }
 
 .about_us .images .flex {
     width: 629px;
-    height: 531px;
+    /*height: 531px;*/
 }
 
 .about_us .description {
@@ -146,5 +147,104 @@
 
 .box-shadow {
     box-shadow: 0 0 5px rgb(206, 206, 206);
+}
+
+@media (max-width: 1385px) {
+    .about_us {
+        width: 100%;
+        padding: 0 12px;
+        /*flex-wrap: wrap;
+        justify-content: center;*/
+    }
+    .about_us .description {
+        margin: 0 42px !important;
+    }
+    #app {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .about_us {
+        padding: 0 12px;
+    }
+    .about_us .description {
+        margin: 0 36px !important;
+    }
+    #app {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .about_us {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 920px) {
+    #app {
+        font-size: 13px;
+    }
+}
+@media (max-width: 867px) {
+    #app {
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
+    #app {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 845px) {
+    .about_us {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .media-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+    .about_us .description span {
+        margin-top: 25px;
+    }
+    .about_us .description p {
+        margin-bottom: 25px;
+    }
+    .about_us .images,
+    .about_us .description {
+        width: 100% !important;
+    }
+    .about_us .images {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 520px) {
+    .about_us {
+        padding: 0;
+    }
+    
+    .about_us .images {
+        padding: 0 10px;
+    }
+    
+    .about_us .description {
+        margin: 0 10px !important;
+    }
+}
+
+@media (max-width: 488px) {
+    .about_us .images > .flex {
+        flex-wrap: wrap-reverse;
+    }
+    .about_us .images > .flex > .flex-col:first-child {
+        flex-direction: column-reverse;
+        margin-right: 0 !important;
+        margin-top: 15px;
+    }
+    .about_us .images > .flex > .flex-col:last-child img {
+        margin-bottom: 0px !important;
+    }
 }
 </style>

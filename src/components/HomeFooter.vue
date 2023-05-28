@@ -31,4 +31,35 @@ footer span {
 
     color: #FFFFFF;
 }
+
+
+@media (max-width: 600px) {
+    svg {
+        margin-left: 15px !important;
+    }
+    footer {
+        height: 81px;
+    }
+    footer span {
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 424px) {
+    svg {
+        font-size: 23px !important;
+        margin-left: 10px !important;
+    }
+    footer {
+        height: 70px;
+    }
+    footer span {
+        font-size: 30px;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        line-height: 20px;
+    }
+}
+
+
 </style>
